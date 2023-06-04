@@ -411,6 +411,7 @@ $$
 Решение уравнений вида $t_i \in x_j$:
 
 $$
+\begin{gather}
 node \leftarrow nodes(x_j)\\
 tokens(node) \leftarrow tokens(node) \lor {t_i}\\
 if\ node(t_i) \neq []\ then\\
@@ -419,17 +420,20 @@ if\ node(t_i) \neq []\ then\\
 \quad end\ for\\
 \quad node(t_i) \leftarrow {}\\
 end\ if
+\end{gather}
 $$
 
 Решение уравнений вида $t_i \in x_j \rightarrow x_m \subseteq x_n$:
 
 $$
+\begin{gather}
 node \leftarrow nodes(x_j)\\
 if\ t_i \in tokens(node)\ then\\
 \quad add\ edge\ from\ nodes(x_m)\ to\ nodes(x_n)\\
 else\\
 \quad node(t_i) \leftarrow node(t_i) \lor {{x_m,x_n}}
 end\ if
+\end{gather}
 $$
 
 Если при добавлении дуги в граф получился цикл (что означает равенство множеств):
@@ -603,9 +607,9 @@ Convex Polyhedra – домен выпуклых многогранников, �
 
 ## Конгруэнция
 
-Элементом домена является конгруэнтное соотношение $a \Equiv b[c]$.
+Элементом домена является конгруэнтное соотношение $a \equiv b[c]$.
 
-В данном случае $a \in {\forall k \in \W | b + ck}$
+В данном случае $a \in {\forall k \in W | b + ck}$
 
 $k$ - набор координат.
 
